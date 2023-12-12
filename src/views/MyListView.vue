@@ -1,6 +1,6 @@
 <script setup>
 import { inject } from 'vue'
-import MyListText from '../components/MyList/Mylisttext.vue'
+import MyListText from '../components/MyList/MylistText.vue'
 import MyListFooter from '../components/MyList/MyListFooter.vue'
 import CardComponent from '../components/CardComponent.vue'
 const cards = inject('cards')
