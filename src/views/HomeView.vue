@@ -21,10 +21,6 @@ import Video from '../components/Video.vue'
   width: 100%;
 }
 
-.wrapper-container {
-  /* display: flex; */
-}
-
 .sliding-lists {
   position: relative;
   z-index: 2;

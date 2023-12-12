@@ -17,10 +17,10 @@
         </div>
       </div>
       <div class="viewing-form-container">
-        <button class="square-box three-line">
+        <button @click="changeDisplayButton('showVideo')" class="square-box three-line">
           <font-awesome-icon :icon="['fas', 'list']" />
         </button>
-        <button class="square-box" @click="changeDisplayButton">
+        <button class="square-box" @click="changeDisplayButton('hideVideo')">
           <font-awesome-icon :icon="['fas', 'table-cells-large']" />
         </button>
       </div>
@@ -55,13 +55,13 @@
 const emit = defineEmits(['displayChanged', 'displayReversed'])
 
 // Display Preference button
-const reverseDisplayButton = () => {
-  emit('displayReversed')
-}
+// const reverseDisplayButton = () => {
+//   emit('displayReversed')
+// }
 
-const changeDisplayButton = () => {
-  console.log('button')
-  emit('displayChanged')
+const changeDisplayButton = (type) => {
+  console.log(type)
+  emit('displayChanged', type)
 }
 </script>
 
@@ -72,6 +72,9 @@ const changeDisplayButton = () => {
   top: 70px;
   width: 100%;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 390px;
 }
 
 .parent-tv-shows {
@@ -138,7 +141,7 @@ const changeDisplayButton = () => {
   justify-content: center;
   align-items: baseline;
   flex-direction: column;
-  margin-top: 4rem;
+  margin-top: auto;
   width: 100%;
 }
 .main-text {

@@ -89,16 +89,11 @@ export default {
 </script>
 
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-weight: 600;
-  color: white;
-}
 .sliding-row-main-container {
   position: relative;
   top: -250px;
+  font-weight: 600;
+  color: white;
 }
 
 /* Sections */

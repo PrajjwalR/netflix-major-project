@@ -58,6 +58,9 @@
   top: 70px;
   width: 100%;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 390px;
 }
 
 .parent-tv-shows {
@@ -124,7 +127,7 @@
   justify-content: center;
   align-items: baseline;
   flex-direction: column;
-  margin-top: 4rem;
+  margin-top: auto;
   width: 100%;
 }
 .main-text {

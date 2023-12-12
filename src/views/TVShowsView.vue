@@ -1,8 +1,8 @@
 <template>
   <div class="home-main-container">
     <div class="wrapper-container">
-      <Video v-if="showVideo" @displayChanged="videoAppearenceChanged()"> </Video>
-      <TVShowsMain class="tv-main"></TVShowsMain>
+      <Video v-if="showVideo"> </Video>
+      <TVShowsMain @displayChanged="videoAppearenceChanged" class="tv-main"></TVShowsMain>
     </div>
     <TVShowsSlidingLists></TVShowsSlidingLists>
     <TVShowsFooter></TVShowsFooter>
@@ -17,9 +17,12 @@ import Video from '../components/Video.vue'
 import { ref } from 'vue'
 
 const showVideo = ref(true)
-const videoAppearenceChanged = () => {
-  console.log('change')
-  showVideo.value = !showVideo.value
+const videoAppearenceChanged = (type) => {
+  if (type === 'showVideo') {
+    showVideo.value = true
+  } else {
+    showVideo.value = false
+  }
 }
 </script>
 
